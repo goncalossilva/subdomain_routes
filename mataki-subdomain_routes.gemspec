@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
      "lib/subdomain_routes/split_host.rb",
      "lib/subdomain_routes/url_writer.rb",
      "lib/subdomain_routes/validations.rb",
+     "mataki-subdomain_routes.gemspec",
      "rails/init.rb",
      "spec/assertions_spec.rb",
      "spec/extraction_spec.rb",
