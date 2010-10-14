@@ -17,11 +17,12 @@ begin
     gem.email = "matsumura.aki@gmail.com"
     gem.homepage = "http://github.com/mataki/subdomain_routes"
     gem.authors = ["Matthew Hollingworth", "Akihiro Matsumura"]
-    gem.add_dependency 'actionpack', ">= 2.2.1"
+    gem.add_dependency 'actionpack', "= 2.3.9"
     gem.has_rdoc = false
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
