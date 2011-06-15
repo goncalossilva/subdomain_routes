@@ -288,6 +288,16 @@ If you're using model-based subdomain routes (covered next), you may want to use
 # Use a "proxy.pac":http://en.wikipedia.org/wiki/Proxy.pac file in your browser so that it proxies _*.reviews.local_ to localhost. How to do this will depend on the browser you're using.
 # Set up a local DNS server with an A record for the domain. This may be a bit involved.
 
+h2. Working with multiple top-level domains (this feature is only present in this fork)
+
+You can easily work with multiple top-level domains. If users can reach your app on "domain.com" and "awesome.myapp.com" you only need to:
+
+<pre>
+SubdomainRoutes::Config.static_domains = ["domain.com", "static.myapp.com"]
+</pre>
+
+You should still define <code>SubdomainRoutes::Config.domain_length</code>, since it will be used for all other domains not included in SubdomainRoutes::Config's <code>static_domains</code>.
+
 h2. Testing with Subdomain Routes
 
 Testing routes and controllers with the SubdomainRoutes gem may require a little extra work. Here's a simple <code>routes.rb</code> as an example:
