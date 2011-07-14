@@ -9,7 +9,7 @@ module SubdomainRoutes
       raise HostNotSupplied, "No host supplied!" if host.blank?
       raise HostNotSupplied, "Can't set subdomain for an IP address!" if host =~ /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/
       
-      static_domain = Config.static_domains.find { |static_domain| host.include?(static_domain) }
+      static_domain = Config.static_domains.find { |static_domain| host.include?(static_domain) } if Config.static_domains
       
       if static_domain
         split_host_by_static_domain(host, static_domain)
